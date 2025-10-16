@@ -52,13 +52,13 @@ public static class Config
             new Client
             {
                 ClientId = "web2",
-                ClientSecrets = { new Secret("49C1A7E1-0C79-4A89-A3D6-A37998FB86B0".Sha256()) },
+                ClientSecrets = { new Secret("5FF27034-6CEB-4284-8E0E-87044C115651".Sha256()) },
 
                 AllowedGrantTypes = GrantTypes.Code,
 
-                RedirectUris = { "https://localhost:5001/signin-oidc" },
-                FrontChannelLogoutUri = "https://localhost:5001/signout-oidc",
-                PostLogoutRedirectUris = { "https://localhost:5001/signout-callback-oidc" },
+                RedirectUris = { "https://localhost:5002/signin-oidc" },
+                FrontChannelLogoutUri = "https://localhost:5002/signout-oidc",
+                PostLogoutRedirectUris = { "https://localhost:5002/signout-callback-oidc" },
 
                 AllowOfflineAccess = true,
                 AllowedScopes = { "openid", "profile", "api1" }

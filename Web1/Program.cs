@@ -3,6 +3,34 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
+builder.Services.AddAuthentication(opt =>
+{
+    opt.DefaultScheme = "cookies";
+    opt.DefaultChallengeScheme = "oidc";
+})
+    .AddCookie("cookies", opt =>
+    {
+        opt.Cookie.Name = "Web1";
+    })
+    .AddOpenIdConnect("oidc", opt =>
+    {
+        opt.Authority = "https://localhost:5000";
+
+        opt.ClientId = "web1";
+        opt.ClientSecret = "49C1A7E1-0C79-4A89-A3D6-A37998FB86B0";
+
+        opt.Scope.Add("api1");
+        opt.Scope.Add("api2");
+
+        opt.MapInboundClaims = false;
+
+        opt.ResponseType = "code";
+
+        opt.GetClaimsFromUserInfoEndpoint = true;
+
+        opt.SaveTokens = true;
+    });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

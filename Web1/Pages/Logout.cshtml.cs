@@ -6,9 +6,13 @@ namespace Web1.Pages;
 
 public class LogoutModel : PageModel
 {
-    public async Task<IActionResult> OnPost()
+    public IActionResult OnPost()
     {
-        await HttpContext.SignOutAsync();
-        return Redirect("/");
+        AuthenticationProperties props = new()
+        {
+            RedirectUri = "/"
+        };
+
+        return SignOut(props, "cookies", "oidc");
     }
 }

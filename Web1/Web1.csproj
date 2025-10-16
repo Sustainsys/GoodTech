@@ -7,10 +7,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Compile Include="..\Helpers.cs" Link="Helpers.cs" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="Microsoft.AspnetCore.Authentication.OpenIdConnect" Version="8.0.20" />
 	</ItemGroup>
 
