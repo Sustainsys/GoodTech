@@ -35,7 +35,7 @@ HttpClient apiClient = new();
 apiClient.DefaultRequestHeaders.Authorization = new
     ("Bearer", tokenResponse.AccessToken);
 
-WriteLine("Caling Api1...");
+WriteLine("Calling Api1...");
 WriteLine();
 
 var api1Response = await apiClient.GetAsync("https://localhost:5010/api1");
@@ -46,6 +46,10 @@ WriteLine($"Api1 Response: {await api1Response.Content.ReadAsStringAsync()}");
 WriteLine();
 WriteLine("Press any key to call api3");
 ReadKey(true);
+
+WriteLine();
+WriteLine("Calling Api1...");
+WriteLine();
 
 var api3Response = await apiClient.GetAsync("https://localhost:5010/api3");
 WriteLine($"Api3 Status Code: {(int)api3Response.StatusCode}");
