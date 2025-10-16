@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Machine", "Machine\Machine.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdSrv", "IdSrv\IdSrv.csproj", "{D7B33CCF-4EC0-0051-9C1E-5F98807F4C7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{0476E24C-468C-4FF9-B052-E84EBB2F39A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,18 @@ Global
 		{D7B33CCF-4EC0-0051-9C1E-5F98807F4C7D}.Release|x64.Build.0 = Release|Any CPU
 		{D7B33CCF-4EC0-0051-9C1E-5F98807F4C7D}.Release|x86.ActiveCfg = Release|Any CPU
 		{D7B33CCF-4EC0-0051-9C1E-5F98807F4C7D}.Release|x86.Build.0 = Release|Any CPU
+		{0476E24C-468C-4FF9-B052-E84EBB2F39A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0476E24C-468C-4FF9-B052-E84EBB2F39A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0476E24C-468C-4FF9-B052-E84EBB2F39A4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0476E24C-468C-4FF9-B052-E84EBB2F39A4}.Debug|x64.Build.0 = Debug|Any CPU
+		{0476E24C-468C-4FF9-B052-E84EBB2F39A4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0476E24C-468C-4FF9-B052-E84EBB2F39A4}.Debug|x86.Build.0 = Debug|Any CPU
+		{0476E24C-468C-4FF9-B052-E84EBB2F39A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0476E24C-468C-4FF9-B052-E84EBB2F39A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0476E24C-468C-4FF9-B052-E84EBB2F39A4}.Release|x64.ActiveCfg = Release|Any CPU
+		{0476E24C-468C-4FF9-B052-E84EBB2F39A4}.Release|x64.Build.0 = Release|Any CPU
+		{0476E24C-468C-4FF9-B052-E84EBB2F39A4}.Release|x86.ActiveCfg = Release|Any CPU
+		{0476E24C-468C-4FF9-B052-E84EBB2F39A4}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
