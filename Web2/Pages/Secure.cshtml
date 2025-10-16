@@ -1,0 +1,25 @@
+﻿@page
+@model Web2.Pages.SecureModel
+@{
+}
+
+<div>
+
+    <h3>User claims</h3>
+    <dl>
+        @foreach (var claim in Model.Session.Claims)
+        {
+            <dt>@claim.Type</dt>
+            <dd>@claim.Value</dd>
+        }
+    </dl>
+
+        <h3>metadata</h3>
+    <dl>
+        @foreach (var item in Model.Session.Metadata)
+        {
+            <dt>@item.Key</dt>
+            <dd>@item.Value</dd>
+        }
+    </dl>
+</div>
