@@ -1,7 +1,14 @@
+using Duende.AccessTokenManagement.OpenIdConnect;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Services.AddOpenIdConnectAccessTokenManagement(opt =>
+{
+    opt.RefreshBeforeExpiration = TimeSpan.FromSeconds(5);
+});
 
 builder.Services.AddAuthentication(opt =>
 {
@@ -21,6 +28,7 @@ builder.Services.AddAuthentication(opt =>
 
         opt.Scope.Add("api1");
         opt.Scope.Add("api2");
+        opt.Scope.Add("offline_access");
 
         opt.MapInboundClaims = false;
 

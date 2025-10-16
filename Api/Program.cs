@@ -9,6 +9,7 @@ builder.Services.AddAuthentication()
         opt.Authority = "https://localhost:5000";
 
         opt.TokenValidationParameters.ValidateAudience = false;
+        opt.TokenValidationParameters.ClockSkew = TimeSpan.FromSeconds(1);
 
         opt.MapInboundClaims = false;
     });
